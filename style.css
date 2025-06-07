@@ -42,6 +42,7 @@ header h1 {
 header img {
 
     object-fit: contain;
+    height: 100%;
 
 }
 .header-wrapper {

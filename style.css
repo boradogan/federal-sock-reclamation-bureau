@@ -142,7 +142,7 @@ header button:hover {
     line-height: 1.5;
     font-size: 1.2rem;
 }
-.message-wrapper {
+.message-title-wrapper {
     max-width: 900px;
     display: flex;
     flex-direction: column;
@@ -151,8 +151,25 @@ header button:hover {
     position: sticky;
     top: var(--header-height); /* This will now work as expected */
     background: rgba(236, 236, 236, 0.9); 
+    color: var(--primary-color);
+    width: 100%;
+}
+
+.message-title-wrapper h1 {
+    font-weight: 550; 
+    margin-top: 0;
+}
+.message-wrapper {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background: rgba(236, 236, 236, 0.9); 
     
 }
+
 .message-pictures {
     margin: 50px 0;
     max-width: 1000px;

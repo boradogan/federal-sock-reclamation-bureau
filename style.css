@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+:root {
+  --primary-color: #003366;    /* The navy blue from our logo */
+  --accent-color: #D4AF37;     /* The gold from our logo */
+  --background-color: #ececec; /* A light, official-looking grey */
+  --text-color: #333333;        /* A dark grey for text */
+  --error-color: #B22222;       /* A standard red for form errors */
+  --header-height: 150px;
+--input-field-width: 300px;
+}
+
+body {
+    min-height: 200vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    font-family: sans-serif;
+    margin: 0;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    z-index: 1000;
+    top: 0px;
+    background: rgba(236, 236, 236, 0.9); 
+    margin-top: 20px;
+    padding: 5px;
+    justify-content: center;
+    height: var(--header-height);
+}
+header h1 {
+    color: var(--primary-color);
+    text-align: center;
+}
+header img {
+
+    object-fit: contain;
+
+}
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    flex: 1;
+    max-width: 800px;
+}
+.header-wrapper h1{
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(var(--header-height) * (0.3));
+    font-weight: 500;
+    margin-right: auto;
+    margin-left: auto;
+}
+nav {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+
+    
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.hero-wrapper{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.hero-wrapper video {
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    height: 500px;
+
+}
+.message-section {
+  background-color: var(--background-color); /* Add a background! */
+  padding: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.message-section button,
+header button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+.message-section button:hover,
+header button:hover {
+    background-color: #b38f2c;
+    transform: scale(1.05);
+}
+
+.message-section button:active {
+    transform: scale(0.95);
+}
+.message-section p {
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+.message-wrapper {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: var(--header-height); /* This will now work as expected */
+    background: rgba(236, 236, 236, 0.9); 
+    
+}
+.message-pictures {
+    margin: 50px 0;
+    max-width: 1000px;
+}
+.pic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.message-pictures img{
+    width: 40%;
+
+}
+.sign-up {
+  /* Add a large temporary height to see the effect */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  /* Add a background color so you can see the space */
+  background-color: #e0e0e0;
+}
+.sign-up-container{
+    flex-basis:700px;
+}
+.sign-up-container  section {
+    display: flex;
+    justify-content: space-between;
+}
+.form-box > * {
+    display: block;
+}
+form p {
+    margin: 0;
+}
+.form-box label
+.form-box p {
+    color: #3a3a3a; /* A lighter gray for labels */
+
+}
+.form-box{
+    width: var(--input-field-width);
+}
+.form-box input,
+.form-box select,
+.form-box textarea {
+    padding: 0.4rem;
+    margin: 0.5rem 0;
+    border: 1px solid #d3d3d3; 
+    font-size: 1.1rem; 
+    width: var(--input-field-width);
+}
+.choice {
+    display: flex;
+    gap: 10%;
+    margin: 10px 0;
+}
+input[type="radio"] {
+    margin: 0;
+}
+section {
+    margin: 10px 0;
+}
+#report-missing-sock {
+    scroll-margin-top: calc(var(--header-height) + 20px);
+}
+form button[type="submit"] {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #b38f2c;
+    transform: scale(1.05);
+}
+
+form button[type="submit"]:active {
+    transform: scale(0.95);
+}
+.hidden {
+    display: none;
+}
+
+
+.was-validated:invalid {
+
+    outline: 2px solid var(--error-color);
+    
+}

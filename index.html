@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reunite Socks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <img src="images/logo.png" alt="">
+            <h1> Federal Sock Reclamation Bureau</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <button onclick="document.getElementById('report-missing-sock').scrollIntoView({ behavior: 'smooth' });">Report Missing Sock</button>
+                    </li>
+                </ul>
+                
+            </nav>
+            
+        </div>
+
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-wrapper">
+                <video src="videos/sock.mp4" autoplay muted loop></video>
+            </div>
+        </section>
+        <section class="message-section">
+            <div class="message-wrapper">
+
+                <h1>A Solemn Duty to Every Sock</h1>
+                <p>Millions of socks go missing every year in the nation. They are lost in the laundry, abandoned in changing rooms, or fall from bags unnoticed. For too long, this crisis has been ignored.</p>
+                <p>In accordance with the "National Laundry & Hosiery Act of 1988", the Federal Sock Reclamation Bureau (FSRB) is the <strong>sole</strong> government body authorized to investigate, track, and resolve cases of missing individual socks. We are dedicated to bringing order to the chaos of laundry day and reuniting soles across the nation.</p>
+                <button onclick="document.getElementById('report-missing-sock').scrollIntoView({ behavior: 'smooth' });">Report Missing Sock</button>
+            </div>
+            <div class="message-pictures">
+                <div class="pic-container">
+                    <img src="images/agent.png" alt="">
+                    <img src="images/forensic.png" alt="">
+                    <img src="images/lab.png" alt="">
+                    <img src="images/logo.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="sign-up">
+            <div class="sign-up-container">
+
+                <form action="" id="report-missing-sock">
+                    <h2>Claimant Information *</h2>
+                    <section class="claimant-information">
+                        <div class="form-box">
+                            <label for="claimant-full-name"> Claimant Full Name</label>
+                            <input type="text" name="claimant-full-name" id="claimant-full-name" placeholder="" required>
+                        </div>
+                        <div class="form-box">
+                            <label for="email">Contact Email</label>
+                            <input type="email" name="email" id="email" required>
+
+                        </div>
+                    </section>
+                    <h2>Missing Sock Profile</h2>
+                    <section class="missing-sock-profile">
+                        <div class="form-box">
+                            <label for="date-dod"> Date of Disappearance</label>
+                            <input type="date" name="date-dod" id="date-dod">
+                        </div>
+                        <div class="form-box">
+                            <label for="last-known-locaiton">Last Known Location</label>
+                            <input type="text" name="last-known-locaiton" id="last-known-locaiton" placeholder="e.g. Washing Machine">
+
+                        </div>
+                        
+                    </section>
+                    <section>
+                        <div class="form-box">
+                            <label for="detailed-description">Detailed Sock Description *</label>
+
+                            <textarea name="detailed-description" id="detailed-description" style="width: 500px; height: 5rem;" placeholder="e.g., Blue with yellow stripes, ankle-length, slightly worn heel..." required></textarea>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="form-box">
+                            <label for="fabric-composition">Fabric Composition</label>
+                            <select name="fabric-composition" id="fabric-composition">
+                                <option value="" selected disabled hidden></option>
+                                <option value="cotton">Cotton</option>
+                                <option value="wool">Wool</option>
+                                <option value="synthethic-blend">Synthethic Blend</option>
+                                <option value="unknown">Unknown/Mysterious Fibers</option>
+                            </select>
+                        </div>
+                    </section>
+                    <h2>Circumstances of Disappearance</h2>
+                    <section>
+                        <div class="form-box">
+                            <label for="suspected-cause">Suspected Cause</label>
+                            <select name="suspected-cause" id="suspected-cause">
+                                <option value="" selected disabled hidden></option>
+                                <option value="">Laundry Day Anomaly</option>
+                                <option value="pet-piracy">Probable Pet Piracy</option>
+                                <option value="furniture">Fell Behind Furniture</option>
+                                <option value="negligence">Simple Negligence / Human Error</option>
+                                <option value="foul-play">I Suspect Foul Play</option>
+                            </select>
+                        </div>
+                        
+                        
+                    </section>
+                    <section>
+                        <div class="form-box">
+                           <p>Was the sock part of a matched pair?</p>
+                           <div class="radio-button-container" style="display: flex; flex-direction: column;">
+                               <div class="choice">
+                                   <input type="radio" id="pair-yes" name="matched-pair" style="width: auto;">
+                                   <label for="pair-yes">Yes</label> 
+
+                               </div>
+                               <div class="choice">
+                                   <input type="radio" id="pair-no" name="matched-pair" style="width: auto;">
+                                   <label for="pair-no">No</label>
+
+    
+                               </div>
+    
+                           </div>
+    
+                       
+                       </div>
+                       <div class="form-box hidden" id="status-container">
+                        <label for="status-of-the-remaining">Status of the remaining sock</label>
+                        <select name="status-of-the-remaining" id="status-of-the-remaining">
+                            <option value="" selected disabled hidden></option>
+                            <option value="custody">In custody</option>
+                            <option value="missing">Also missing</option>
+                            <option value="refuses">Refuses to cooperate</option>
+                        </select>
+
+                       </div>
+
+                    </section>
+                    <h2>Emotional Impact Assessment</h2>
+                    <section>
+                        <div class="form-box" style="width: auto;">
+                            <p>How sad are you that you lost your beloved sock?</p>
+                            <div>
+                                <input type="range" id="sadness-level" name="sadness-level" min="0" max="10" step="1" value="0">
+                                <p class="sadness-level-text">0</p>
+                            </div>
+                            <label for="sadness-level" style="color: rgb(151, 151, 151);">0 (Not Sad) to 10 (Devastated)</label>
+                        </div>
+                    </section>
+                    <h2>Declaration</h2>
+                    <div class="declaration">
+                        <input type="checkbox" required> I hereby declare that the information provided is accurate to the best of my recolleciton and that a cursory search has been performed in all reasonable locations.
+                    </div>
+
+                    <div class="form-box"></div>
+                        <button type="submit">Submit Report</button>
+                    </div>
+    
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="javascript.js" defer></script>
+    
+</body>
+</html>
